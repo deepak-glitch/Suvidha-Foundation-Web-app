@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Your Prediction!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color:black">
+  <div id="maintext" style="position:absolute; margin:auto; width:700px; height:600px; text-align:center; top:0; bottom: 0; left: 0; right: 0;">
+    <h1 class="text-light mb-5"> Summarization </h1>
+    <p class="text-light"> My algorithm gave this Summarized Video: </p>
+    <p class="text-light"> <a href="{{url_for('download_video', filename=filename)}}">Download</a> </p>
+    <table class="table-bordered text-light" style="width:100%">
+      <tr>
+        <th>output </th>
+        <th>Summary</th>
+       
+      </tr>
+
+      <td>Video Output:</td>
+      <td>
+        
+          <div style="margin: 10px auto;">
+            <video width="560" height="315" src="{{ url_for('upload_video_prediction', filename=filename) }}" autoplay="autoplay" controls="controls" preload="preload" codecs="mp4v.20.8"></video>
+          </div>
+        
+      </td>
+    </tr>
+    </table>
+    <a href="{{ url_for('x') }}"><button class="button mt-3">Try again?</button></a>
+  </div>
+</body>
+</html>

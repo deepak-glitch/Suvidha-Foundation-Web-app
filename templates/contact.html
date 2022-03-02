@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/contact.css') }}" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="{{ url_for('static',filename='img/shape.png') }}" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            dolorum adipisci recusandae praesentium dicta!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="{{ url_for('static',filename='img/location.png') }}" class="icon" alt="" />
+              <p>H.No. 1951, W.N.4, Khaperkheda, Saoner, Nagpur</p>
+            </div>
+            <div class="information">
+              <img src="{{ url_for('static',filename='img/email.png') }}" class="icon" alt="" />
+              <p>Info@Suvidhafoundationedutech.Org</p>
+            </div>
+            <div class="information">
+              <img src="{{ url_for('static',filename='img/phone.png') }}" class="icon" alt="" />
+              <p>+917020044091</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/SuvidhaFoundation1/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_transition=0&show_community_review_changes=0">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/suvidhafoundationedutech/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/suvidha-foundation/">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+              <div class="skills">
+              
+                
+                <button onclick="location.href='/'" style='margin-right:16px'>Home Page</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off" onsubmit="sendEmail(); reset(); return false">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input1" placeholder="UserName"/>
+              
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input2" placeholder="Email"/>
+              
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input3" placeholder="Phone"/>
+              
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input4" placeholder="Message"></textarea>
+              
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" /><hr><hr>
+
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="{{ url_for('static',filename='script/contact.js') }}"></script>
+  </body>
+</html>
